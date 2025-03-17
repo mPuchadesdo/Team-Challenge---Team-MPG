@@ -26,6 +26,7 @@ def get_features_num(dataframe):
     features_num = list(dataframe.columns[dataframe.dtypes != "object"])
     features_num.remove(get_target())
     features_num.remove('cylinders')
+    features_num.remove('fuel_comb_Lkm')
     return features_num
 
 
