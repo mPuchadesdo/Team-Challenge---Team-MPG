@@ -57,3 +57,6 @@ def data_report(df):
     concatenado.set_index('COL_N', drop=True, inplace=True)
 
     return concatenado.T
+
+def clean_categoricals(df):
+    return df.apply(lambda col: col.astype(str).str.lower())
