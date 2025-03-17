@@ -28,13 +28,9 @@ Este proyecto tiene como objetivo predecir el consumo de millas por galón (MPG)
 
 Para garantizar la compatibilidad del entorno, se recomienda el uso de un entorno virtual con la versión de Python 3.12.7
 
-Creación del Entorno Virtual
+Creación del Entorno Virtual : python -m venv entorno_virtual
 
-python -m venv entorno_virtual
-
-Activación del Entorno Virtual
-
-Windows:
+Activación del Entorno Virtual :
 
 entorno_virtual\Scripts\activate
 
