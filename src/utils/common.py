@@ -1,5 +1,7 @@
 import pandas as pd
 
+MODEL_PATH = "../models/modelo_pipeline.joblib"
+
 TRAIN_PATH = "../data/mpg_train.csv"
 TEST_PATH = "../data/mpg_test.csv"
 
