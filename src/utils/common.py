@@ -1,14 +1,32 @@
 import pandas as pd
 
 TRAIN_PATH = "../data/mpg_train.csv"
+TEST_PATH = "../data/mpg_test.csv"
 
-def get_dataframe():
-    df_result = pd.read_csv(TRAIN_PATH)
+def get_dataframe(path=TRAIN_PATH):
+    df_result = pd.read_csv(path)
 
     new_names = ["year", "brand", "model", "vehicle_class", "engine_size", "cylinders", "transmission", "fuel_type", "fuel_city_Lkm", "fuel_hwy_Lkm", "fuel_comb_Lkm", "fuel_comb_mpg", "co2"]
     df_result.columns = new_names
 
     return df_result
+
+def get_dataframe_train():
+    return get_dataframe()
+
+def get_dataframe_test():
+    return get_dataframe(TEST_PATH)
+
+def get_target():
+    return "fuel_comb_mpg"
+
+def get_features_num(dataframe):
+    features_num = list(dataframe.columns[dataframe.dtypes != "object"])
+    features_num.remove(get_target())
+    return features_num
+
+def get_features_cat(dataframe):
+    return list(dataframe.select_dtypes(include = ['object']).columns)
 
 def data_report(df):
     '''Esta funcion describe los campos de un dataframe de pandas de forma bastante clara, crack'''
