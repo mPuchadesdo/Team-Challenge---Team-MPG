@@ -39,6 +39,3 @@ Instalación de Dependencias
 Las dependencias necesarias para ejecutar el proyecto se encuentran en el archivo requirements.txt. Para instalarlas, ejecutar:
 
 pip install -r requirements.txt
-
-
-
